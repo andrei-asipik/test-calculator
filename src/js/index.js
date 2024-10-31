@@ -1,4 +1,5 @@
-import "../styles/main.scss";
+import '../styles/main.scss';
 
-import "./calculator";
-import "./operations";
+import './thems';
+import './calculator';
+import './operations';

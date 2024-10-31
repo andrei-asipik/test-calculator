@@ -3,35 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Калькулятор</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="styles/main.scss" />
   </head>
   <body>
     <div class="calculator">
+      <div id="theme-toggle" class="theme-toggle">☀️</div>
       <div id="display">0</div>
       <div class="buttons">
-        <button class="button gray" data-action="clear">AC</button>
-        <button class="button gray" data-action="toggle-sign">+/-</button>
-        <button class="button gray" data-action="percent">%</button>
+        <button class="button" data-action="clear">AC</button>
+        <button class="button" data-action="toggle-sign">+/-</button>
+        <button class="button" data-action="percent">%</button>
         <button class="button orange" data-action="operator">÷</button>
-        <button class="button gray" data-action="number">7</button>
-        <button class="button gray" data-action="number">8</button>
-        <button class="button gray" data-action="number">9</button>
+        <button class="button" data-action="number">7</button>
+        <button class="button" data-action="number">8</button>
+        <button class="button" data-action="number">9</button>
         <button class="button orange" data-action="operator">×</button>
-        <button class="button gray" data-action="number">4</button>
-        <button class="button gray" data-action="number">5</button>
-        <button class="button gray" data-action="number">6</button>
+        <button class="button" data-action="number">4</button>
+        <button class="button" data-action="number">5</button>
+        <button class="button" data-action="number">6</button>
         <button class="button orange" data-action="operator">-</button>
-        <button class="button gray" data-action="number">1</button>
-        <button class="button gray" data-action="number">2</button>
-        <button class="button gray" data-action="number">3</button>
+        <button class="button" data-action="number">1</button>
+        <button class="button" data-action="number">2</button>
+        <button class="button" data-action="number">3</button>
         <button class="button orange" data-action="operator">+</button>
-        <button class="button gray zero" data-action="number">0</button>
-        <button class="button gray" data-action="decimal">,</button>
+        <button class="button zero" data-action="number">0</button>
+        <button class="button" data-action="decimal">,</button>
         <button class="button orange" data-action="equals">=</button>
       </div>
     </div>
     <script src="js/operations.js"></script>
+    <script src="js/thems.js"></script>
     <script src="js/calculator.js"></script>
   </body>
 </html>
