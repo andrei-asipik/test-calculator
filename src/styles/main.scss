@@ -1,0 +1,57 @@
+@use "./scss/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $color-background-gray;
+}
+
+.calculator {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#display {
+  background: $color-background-display-gray;
+  color: $color-button-white;
+  text-align: right;
+  padding: 20px;
+  font-size: 36px;
+  border: 1px solid $color-background-display-gray;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .button {
+    padding: 20px;
+    font-size: 24px;
+    border: 1px solid $color-background-display-gray;
+    cursor: pointer;
+  }
+
+  .gray {
+    background-color: $color-button-gray;
+    color: $color-button-white;
+  }
+
+  .orange {
+    background-color: $color-button-orange;
+    color: $color-button-white;
+  }
+
+  .zero {
+    grid-column: span 2;
+  }
+}
