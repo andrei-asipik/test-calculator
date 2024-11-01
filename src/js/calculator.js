@@ -1,3 +1,12 @@
+import {
+  add,
+  subtract,
+  multiply,
+  divide,
+  percent,
+  changeSign,
+} from './operations';
+
 document.addEventListener('DOMContentLoaded', () => {
   let displayValue = '0';
   let firstOperand = null;
@@ -7,13 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const display = document.getElementById('display');
 
+  function updateDisplay() {
+    if (displayValue.length > 13 && !displayValue.includes('.')) {
+      displayValue = 'ERROR';
+    } else if (displayValue.length > 13) {
+      displayValue = displayValue.slice(0, 13);
+    }
+    display.textContent = displayValue;
+  }
+
   function clearDisplay() {
     displayValue = '0';
     firstOperand = null;
     secondOperand = null;
     currentOperator = null;
     shouldReset = false;
-    display.textContent = displayValue;
+    updateDisplay();
   }
 
   function appendNumber(number) {
@@ -25,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       displayValue += number;
     }
-    display.textContent = displayValue;
+    updateDisplay();
   }
 
   function setOperator(operator) {
@@ -62,12 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
     firstOperand = parseFloat(displayValue);
     currentOperator = null;
     shouldReset = true;
-    display.textContent = displayValue;
+    updateDisplay();
   }
 
   function toggleSign() {
     displayValue = changeSign(parseFloat(displayValue)).toString();
-    display.textContent = displayValue;
+    updateDisplay();
   }
 
   function handleButtonClick(event) {
