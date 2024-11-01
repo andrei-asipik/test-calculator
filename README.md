@@ -8,9 +8,8 @@
 
 1. Склонируйте репозиторий на локальный компьютер:
 
-   ```git clone https://github.com/yourusername/repository.git
-      cd repository
-   ```
+   `git clone https://github.com/andrei-asipik/test-calculator.git`
+   `cd repository`
 
 1. Установите зависимости:
 
