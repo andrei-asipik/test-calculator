@@ -1,11 +1,4 @@
-import {
-  add,
-  subtract,
-  multiply,
-  divide,
-  percent,
-  changeSign,
-} from './operations';
+import { add, subtract, multiply, divide, percent, changeSign } from './operations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   let displayValue = '0';
